@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 0.6s forwards;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 10px;
+}
+li {
+    position: relative;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+  background-color: #33336f;
+
+  transition: width 0.4s ease;
+}
+li:hover::after {
+  width: 100%;
+}
+
+a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 16px;
+    transition: all 0.5s ease;
+    color: #fefefe;
+}
+
+
+body {
+    height: 105vh;
+    background: 
+    linear-gradient(
+    45deg,
+    #070327fe,
+    #200d50f4,
+    #241663a6,
+    #132853,
+    #063649,
+    #163140
+    ) , url(background.jpg);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    scroll-behavior: smooth;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes gradientMove {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.mcontent {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 0.6s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    color: #fefefe;
+    text-transform: uppercase;
+}
+.mcontent .tittle {
+    text-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+}
+.mcontent img {
+    height: 300px;
+    width: 600px;
+    margin-bottom: 10px;
+}
+.mcontent .about {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.contentBtn {
+    padding: 10px 16px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 16px;
+}
+
+.contentBtn:hover {
+    background: #fefefe;
+    color: black;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.projects{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 0.6s forwards;
+    background: #050c1b;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.project-card {
+    background: rgba(21, 14, 81, 0.447);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    min-height: 12em;
+    width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project-card:hover {
+    transform: scale(1.1);
+}
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+.project-image img {
+    width: 100%;
+}
+.project-info {
+    padding: 1em;
+    color: #f0f0f0;
+}
+.project-category {
+    font-size: 0.8em;
+    color: #fff;
+}
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #32444e;
+    transition: all 0.3s ease;
+}
+.more-details:hover {
+    color: #3a5a6d8a;
+}
+.tittle {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 0.6s forwards;
+    background: linear-gradient(to bottom,#050c1b,#191955);
+    color: white;
+    height: 250px;
+}
+.about .abt p {
+    text-align: center;
+    width: 70%;
+}
+.about .abt .social-icons {
+    font-size: 40px;
+    margin-top: 30px;
+}
+.about .abt .social-icons a:hover {
+    color: #063649;
+}
+
+.about .abt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project {
+    margin-top: 100px;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 0.6s forwards;
+}
+
+
+
+.footer {
+    background-color: #000016;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer-title span {
+    color: #063649;
+}
+.footer .social-icons a {
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+
+/* شاشات أصغر من 1024px (تابلت) */
+@media (max-width: 1024px) {
+    .mcontent img {
+        width: 80%;
+        height: auto;
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .project-card {
+        width: 45%;
+        margin: 15px;
+    }
+
+    .about .abt p {
+        width: 85%;
+        font-size: 0.9em;
+    }
+
+    .tittle {
+        font-size: 2em;
+    }
+
+    li {
+        margin-left: 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* شاشات أصغر من 768px (موبايل كبير وصغير) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 10px 0;
+    }
+
+    ul {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .mcontent img {
+        width: 90%;
+    }
+
+    .project-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .tittle {
+        font-size: 1.6em;
+    }
+
+    .about .abt p {
+        width: 90%;
+        font-size: 0.85em;
+    }
+}
+
+/* نصوص صغيرة جداً على شاشات أقل من 480px */
+@media (max-width: 480px) {
+    .tittle {
+        font-size: 1.3em;
+    }
+
+    .contentBtn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+
+    .footer {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .social-icons {
+        margin-top: 15px;
+    }
+}
