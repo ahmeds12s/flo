@@ -352,11 +352,16 @@ body {
     height: 450px;
 }
 
+.work-wall {
+    padding: 100px 0;
+    background: linear-gradient(to bottom,#050c1b00,#191955 30%);
+}
+
 
 .work-card img {
     height: 200px;
     width: 100%;
-    border-radius: 14px 0 0 0;
+    border-radius: 14px 14px 0 0;
 }
 
 .work-card:hover {
