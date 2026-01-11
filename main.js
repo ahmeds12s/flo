@@ -38,3 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+const select = document.getElementById("mySelect");
+const items = document.querySelectorAll(".item");
+
+select.addEventListener("change", () => {
+  const value = select.value;
+
+  items.forEach(item => {
+    if (item.id === value) {
+      item.style.display = "block"; 
+    } else {
+      item.style.display = "none";  
+    }
+  });
+});
+
